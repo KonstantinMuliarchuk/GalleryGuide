@@ -18,6 +18,7 @@ class WorkVC: UIViewController {
     @IBOutlet weak var ImageName: UILabel!
     @IBOutlet weak var workType: UILabel!
 
+    @IBOutlet weak var sizeLbl: UILabel!
     var work: WorksVO!
     
     override func viewDidLoad() {
@@ -28,10 +29,18 @@ class WorkVC: UIViewController {
         }
 
         self.yearOfProduce.text = work.created_at
+        if (work.size != nil) {
+            self.sizeLbl.text = work.size! + "cm"
+        }
         self.authorName.text = work.author
         self.workType.text = work.type
         self.ImageName.text = work.title
         self.workImage.image = UIImage(named: (work.imgPicture?.name)!)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        
     }
 
 

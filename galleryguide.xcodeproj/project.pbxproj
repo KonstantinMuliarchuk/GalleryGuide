@@ -16,7 +16,6 @@
 		20F5964D1F094EF60079620D /* LoginPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5964C1F094EF60079620D /* LoginPageVC.swift */; };
 		20F596701F097E800079620D /* WorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F5966F1F097E800079620D /* WorkVC.swift */; };
 		342522398658871F7BA4B0A5 /* Pods_GalleryGuide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5741DD0322C1917EAD921A39 /* Pods_GalleryGuide.framework */; };
-		416855D61EE3EAE400EE7F74 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416855D51EE3EAE400EE7F74 /* LoadingViewController.swift */; };
 		416855DC1EE3EE7A00EE7F74 /* ExhibitionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416855DB1EE3EE7A00EE7F74 /* ExhibitionsModel.swift */; };
 		416855DE1EE3F00A00EE7F74 /* ExhibitionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416855DD1EE3F00A00EE7F74 /* ExhibitionsViewController.swift */; };
 		416855E01EE410B500EE7F74 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416855DF1EE410B500EE7F74 /* DetailsViewController.swift */; };
@@ -35,7 +34,6 @@
 		20E276101F053ABD00C8C65E /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemCell.swift; path = galleryguide/ViewControllers/ItemCell.swift; sourceTree = SOURCE_ROOT; };
 		20F5964C1F094EF60079620D /* LoginPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPageVC.swift; sourceTree = "<group>"; };
 		20F5966F1F097E800079620D /* WorkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkVC.swift; sourceTree = "<group>"; };
-		416855D51EE3EAE400EE7F74 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		416855DB1EE3EE7A00EE7F74 /* ExhibitionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitionsModel.swift; sourceTree = "<group>"; };
 		416855DD1EE3F00A00EE7F74 /* ExhibitionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExhibitionsViewController.swift; sourceTree = "<group>"; };
 		416855DF1EE410B500EE7F74 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -95,12 +93,9 @@
 		416855D41EE3EA8200EE7F74 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				416855D51EE3EAE400EE7F74 /* LoadingViewController.swift */,
+				20F5964C1F094EF60079620D /* LoginPageVC.swift */,
 				416855DD1EE3F00A00EE7F74 /* ExhibitionsViewController.swift */,
 				416855DF1EE410B500EE7F74 /* DetailsViewController.swift */,
-				20E276101F053ABD00C8C65E /* ItemCell.swift */,
-				2072796D1F070493009A4F9B /* WorksCell.swift */,
-				20F5964C1F094EF60079620D /* LoginPageVC.swift */,
 				20F5966F1F097E800079620D /* WorkVC.swift */,
 			);
 			path = ViewControllers;
@@ -110,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				416855DB1EE3EE7A00EE7F74 /* ExhibitionsModel.swift */,
+				20E276101F053ABD00C8C65E /* ItemCell.swift */,
+				2072796D1F070493009A4F9B /* WorksCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,7 +193,7 @@
 				TargetAttributes = {
 					41EBF2F51ED5FFD700DBA60F = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = E46QAZTM5Y;
+						DevelopmentTeam = D9V922QB92;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -295,7 +292,6 @@
 				41EBF2FA1ED5FFD700DBA60F /* AppDelegate.swift in Sources */,
 				20F596701F097E800079620D /* WorkVC.swift in Sources */,
 				20E276111F053ABD00C8C65E /* ItemCell.swift in Sources */,
-				416855D61EE3EAE400EE7F74 /* LoadingViewController.swift in Sources */,
 				416855DE1EE3F00A00EE7F74 /* ExhibitionsViewController.swift in Sources */,
 				20F5964D1F094EF60079620D /* LoginPageVC.swift in Sources */,
 			);
@@ -421,7 +417,7 @@
 			baseConfigurationReference = 7D4E4BFF3FAF800E3C078004 /* Pods-GalleryGuide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E46QAZTM5Y;
+				DEVELOPMENT_TEAM = D9V922QB92;
 				INFOPLIST_FILE = GalleryGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.goit.gallery.GalleryGuide;
@@ -435,7 +431,7 @@
 			baseConfigurationReference = B594F81B4C8AFEA927E2B028 /* Pods-GalleryGuide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = E46QAZTM5Y;
+				DEVELOPMENT_TEAM = D9V922QB92;
 				INFOPLIST_FILE = GalleryGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.com.goit.gallery.GalleryGuide;

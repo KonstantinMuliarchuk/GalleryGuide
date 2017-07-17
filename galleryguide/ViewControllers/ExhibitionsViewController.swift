@@ -17,6 +17,7 @@ class ExhibitionsViewController: UIViewController, UITableViewDataSource, UITabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         ExhibitionsModel.instance.loadExhibitions(exhibitionsLoaded: tableView.reloadData)
@@ -25,7 +26,7 @@ class ExhibitionsViewController: UIViewController, UITableViewDataSource, UITabl
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
     }
     

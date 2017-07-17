@@ -10,6 +10,8 @@ import UIKit
 
 class DetailsViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegate {
     
+    @IBOutlet weak var likeButton: UIBarButtonItem!
+    @IBOutlet weak var stackViewToHide: UIStackView!
     
     @IBOutlet weak var scrolView: UIScrollView!
     @IBOutlet weak var citiNameLbl: UILabel!
@@ -25,10 +27,11 @@ class DetailsViewController: UIViewController,UICollectionViewDataSource, UIColl
     @IBOutlet weak var phoneNumber: UILabel!
     @IBOutlet weak var facebookLbl: UILabel!
     
-    @IBOutlet weak var deskriptionLbl: UILabel!
+    @IBOutlet weak var artistDesckr: UITextView!
+    @IBOutlet weak var deskriptionLbl: UITextView!
     @IBOutlet weak var urlLinkLbl: UIView!
     
-    @IBOutlet weak var aboutLbl: UILabel!
+    @IBOutlet weak var aboutLbl: UITextView!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -58,8 +61,14 @@ class DetailsViewController: UIViewController,UICollectionViewDataSource, UIColl
         facebookLbl.text = exhibition.gallery.facebook
         deskriptionLbl.text = exhibition.authourDeskript
         aboutLbl.text = exhibition.details
+        artistDesckr.text = exhibition.authourDeskript
         
     
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -92,7 +101,17 @@ class DetailsViewController: UIViewController,UICollectionViewDataSource, UIColl
         
     }
 
+    @IBAction func arrowPresed(_ sender: UIButton) {
+        if stackViewToHide.isHidden {
+            stackViewToHide.isHidden = false
+        } else {
+            stackViewToHide.isHidden = true
+        }
+    }
     
+    @IBAction func heartBarButtonPressed(_ sender: UIBarButtonItem) {
+        likeButton.image = UIImage(named: "like_full")
+    }
 
 
 }
